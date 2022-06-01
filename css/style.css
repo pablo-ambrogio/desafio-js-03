@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 43.74em) {
+  .container {
+    align-items: start;
+    padding-top: 3em;
+  }
+}
+.container__items {
+  grid-area: texts;
+  width: 100%;
+  height: 85%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "logo picture" "texts picture";
+  column-gap: 3rem;
+  place-items: center start;
+  background: url(../images/bg-pattern-desktop.svg) no-repeat left/contain;
+}
+@media screen and (max-width: 43.74em) {
+  .container__items {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "logo" "picture" "texts";
+    column-gap: 0;
+  }
+}
+
+.logo {
+  grid-area: logo;
+  width: 65%;
+  height: auto;
+  place-self: center;
+}
+@media screen and (max-width: 43.74em) {
+  .logo {
+    margin-bottom: 2em;
+  }
+}
+
+.texts {
+  grid-area: texts;
+  width: 65%;
+  height: auto;
+  place-self: start center;
+}
+@media screen and (max-width: 43.74em) {
+  .texts {
+    width: 80%;
+  }
+}
+
+.text__title {
+  font-size: 3.8em;
+  font-weight: 300;
+  line-height: 4.5rem;
+  letter-spacing: 1rem;
+  color: #ce9797;
+  margin: 0.5rem auto;
+}
+@media screen and (max-width: 43.74em) {
+  .text__title {
+    text-align: center;
+    font-size: 3em;
+    line-height: 3.5rem;
+    letter-spacing: 0.8rem;
+    padding-top: 1em;
+  }
+}
+.text__title-span {
+  font-size: inherit;
+  font-weight: 600;
+  color: #413a3a;
+}
+@media screen and (max-width: 43.74em) {
+  .text__title-span {
+    padding-top: 0;
+  }
+}
+
+.text__paragraph {
+  color: #ce9797;
+  font-weight: 500;
+  line-height: 1.8rem;
+}
+@media screen and (max-width: 43.74em) {
+  .text__paragraph {
+    text-align: center;
+  }
+}
+
+.picture-women {
+  grid-area: picture;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  text-align: end;
+  background: url(../images/hero-desktop.jpg) no-repeat center right/contain;
+}
+@media screen and (max-width: 43.74em) {
+  .picture-women {
+    aspect-ratio: 16/9;
+    height: auto;
+    background: url(../images/hero-mobile.jpg) no-repeat top/cover;
+  }
+}
+.picture-women__img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  padding: 0;
+  margin: 0;
+}
+
+#form {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.form {
+  padding-top: 1rem;
+}
+.form__input {
+  width: 100%;
+  height: auto;
+  position: relative;
+  outline: none;
+  border: 1.5px solid #ce9797;
+  border-radius: 40px;
+  opacity: 0.5;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-left: 1.5rem;
+}
+.form__input::placeholder {
+  color: #ce9797;
+  opacity: 0.5;
+}
+.form__input--error {
+  background: url(../images/icon-error.svg) no-repeat 75%;
+  border: 1.5px solid #f96262;
+  animation: error 0.2s linear;
+}
+.form__input--good {
+  background: url(../images/icon-gif.gif) no-repeat 75%/contain;
+  border: 1.5px solid #2f9f2f;
+  transition: all 1s ease;
+}
+.form__button {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  border-radius: 40px;
+  outline: none;
+  background: linear-gradient(to right, #f8bfbf, #ee8c8c);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+@media screen and (max-width: 43.74em) {
+  .form__button {
+    width: 25%;
+  }
+}
+.form__button-img {
+  vertical-align: middle;
+}
+.form__button--active:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem #f8bfbf);
+  background: linear-gradient(to right, #f8bfbfe1 100%, #ee8c8c 0);
+}
+.form__text {
+  color: #f96262;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  visibility: hidden;
+}
+
+@keyframes error {
+  from {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0.1rem);
+  }
+  50% {
+    transform: translateX(-0.1rem);
+  }
+  75% {
+    transform: translateX(0.1rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
