@@ -156,6 +156,7 @@ body {
 .form__input--error {
   background: url(../images/icon-error.svg) no-repeat 75%;
   border: 1.5px solid #f96262;
+  opacity: 1;
   animation: error 0.2s linear;
 }
 .form__input--good {

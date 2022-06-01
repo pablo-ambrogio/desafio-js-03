@@ -179,13 +179,19 @@
             background: url(../images/icon-error.svg) no-repeat 75%;
             border: 1.5px solid cl.$primary-soft-red;
             
+            opacity: 1;
+
             animation: error .2s linear;
         }
 
         &--good {
             background: url(../images/icon-gif.gif) no-repeat 75% / contain;
+
             border: 1.5px solid #2f9f2f;
+            
             transition: all 1s ease;
+
+            opacity: 1;
         }
     }
 
