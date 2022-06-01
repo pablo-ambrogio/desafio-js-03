@@ -16,6 +16,7 @@ let validarForm = () => {
         if( validarEmail.test( email.value ) ) {
             email.classList.remove( 'form__input--error' );
             email.classList.add( 'form__input--good' );
+            text.style.visibility = 'hidden';
         }
         else {
             email.classList.add( 'form__input--error' );
